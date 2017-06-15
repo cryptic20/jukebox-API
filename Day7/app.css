@@ -1,0 +1,47 @@
+span {
+	margin-left: 15px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+p.player{
+	margin-left: 15px;
+}
+
+#playlist{
+	font-size: 20px;
+	background:black;
+	width:250px;
+	overflow: scroll;
+}
+.active a{
+	color:green;
+	text-decoration:none;
+}
+ul {
+	color: white;
+}
+li {
+	list-style: url(music.png);
+}
+
+li a{
+	text-decoration: none;
+	color:white;
+	display:block;}
+li a:hover{
+	text-decoration:
+	none;
+}
+/*
+#searchResult{
+	font-weight: bold;
+}
+
+div.result{
+	width: 300px;
+	background-color: gray;
+	height: 300px;
+	overflow: scroll;
+	font-size: 15px;
+}*/

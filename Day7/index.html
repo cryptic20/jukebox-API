@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="spotify-web-api-js/src/spotify-web-api.js"></script>
+<link rel="stylesheet" type="text/css" href="app.css">
+<script src="app.js"></script>
+<title>Jukebox</title></head>
+
+
+
+<body>
+<!-- <input type="file" value="Choose File"> -->
+<span id="select_song"></span>
+
+	<input type="text" id="link" placeholder="search song,artist or album"> <button onclick="Jukebox(add())">ADD</button>
+	<button onclick="spotify()">SEARCH</button>
+
+
+
+<p class="player">
+<audio class="song" preload="auto" tabindex="0" type="audio/mpeg" id="song">
+<source type="audio/mp3" src="">
+</audio>
+<button onclick="Jukebox(play())" id="play">Play</button>
+<button onclick="Jukebox(pause())" id="pause" style="display: none;" >Pause</button>
+<button onclick="Jukebox(stop())">STOP</button>
+<button onclick="Jukebox(replay())">Replay</button>
+<span id="timeleft">Volume: </span>
+<button onclick="Jukebox(volumeUp())">+</button>
+<button onclick="Jukebox(volumeDown())">-</button>
+<br>
+<button onclick="Jukebox(backward())">Backward</button>
+<button onclick="Jukebox(forward())">Forward</button>
+
+<!--<button onclick="Jukebox(skip())">Skip</button><br>-->
+
+<button onclick="Jukebox(mute())">MUTE</button>
+
+</p>
+<!--  maybe gonna work on this
+<div class="result">
+RESULTS: 
+<ul id="searchResults">
+</ul>
+</div>
+-->
+<p>
+<ul id="playlist">	
+<li class="active">
+PLAYLIST
+</li>
+</ul>
+</p>
+
+
+
+</body>
+
+
+
+</html>
