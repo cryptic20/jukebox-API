@@ -1,6 +1,12 @@
 
+var images = ['background1.jpg', 'background2.jpg', 'background3.jpg', 'background4.jpg', 'background5.jpg', 'background6.jpg', 
+'background7.jpg', 'background8.jpg', 'background9.jpg', 'background10.jpg'];
 
 $(document).ready(function(){
+
+ $('html').css({'background-image': 'url(background/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+
 console.log("jukebox starting...");
 
 Jukebox();
@@ -32,8 +38,9 @@ $('#playlist').append(link);
 }
 
 var spotifyApi = new SpotifyWebApi();
-
+while(token == null || token == "" || token.length < 20){
 var token = prompt("enter access token for spotify...");
+}
 
 spotifyApi.setAccessToken(token);
 
@@ -79,9 +86,6 @@ function spotify(){
 
 
     }
-
-   
-
 }
 
 
@@ -190,6 +194,7 @@ function init(){
         link = $(this);
         current = link.parent().index();
         run(link, audio[0]);
+        console.clear();
     });
 
 
@@ -202,6 +207,7 @@ function init(){
             link = playlist.find('a')[current];    
         }
         run($(link),audio[0]);
+
     });
 }
 
@@ -211,17 +217,13 @@ function run(link, player){
         par.addClass('active').siblings().removeClass('active');
         audio[0].load();
         audio[0].play();
-}
-/*
-function choose(){
-		playlist.find('a').click(function(e){
-        e.preventDefault(); //prevent links from going on a page..
-        link = $(this);
-        current = link.parent().index();
-        run($(link),audio[0]);
+        $('#play').hide();  
         $('#pause').show();
-        $('#play').hide();
+        console.clear();
+        
+        
+}
 
-})
-}*/
+
+
 

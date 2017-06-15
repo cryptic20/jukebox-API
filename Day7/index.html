@@ -1,51 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Jukebox</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script src="spotify-web-api-js/src/spotify-web-api.js"></script>
 <link rel="stylesheet" type="text/css" href="app.css">
 <script src="app.js"></script>
-<title>Jukebox</title></head>
 
 
+<!-- boostrap-->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="app.css" rel="stylesheet">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <!-- boostrap -->
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="js/bootstrap.min.js"></script>
+</head>
 
 <body>
-<!-- <input type="file" value="Choose File"> -->
-<span id="select_song"></span>
 
-	<input type="text" id="link" placeholder="search song,artist or album"> <button onclick="Jukebox(add())">ADD</button>
-	<button onclick="spotify()">SEARCH</button>
+<div class="container text-center">
 
+	<input type="text" id="link" class="form-control input-sm" placeholder="search song, artist or album title..."> 
+	<!-- <button onclick="Jukebox(add())">ADD</button>
+	<button onclick="spotify()">SEARCH</button> -->
 
 
 <p class="player">
 <audio class="song" preload="auto" tabindex="0" type="audio/mpeg" id="song">
 <source type="audio/mp3" src="">
 </audio>
-<button onclick="Jukebox(play())" id="play">Play</button>
-<button onclick="Jukebox(pause())" id="pause" style="display: none;" >Pause</button>
-<button onclick="Jukebox(stop())">STOP</button>
-<button onclick="Jukebox(replay())">Replay</button>
-<span id="timeleft">Volume: </span>
-<button onclick="Jukebox(volumeUp())">+</button>
-<button onclick="Jukebox(volumeDown())">-</button>
-<br>
-<button onclick="Jukebox(backward())">Backward</button>
-<button onclick="Jukebox(forward())">Forward</button>
+<div style="margin-top: 10px;">
+<button class="btn btn-success" onclick="Jukebox(play())" id="play">Play</button>
+<button class="btn btn-success"onclick="Jukebox(pause())" id="pause" style="display: none;" >Pause</button>
+<button class="btn btn-primary"onclick="Jukebox(replay())">Replay</button>
+<span id="timeleft" style="display: inline-block;">Volume: </span>
+<button class="btn btn-success" onclick="Jukebox(volumeUp())">+</button>
+<button class="btn btn-danger" onclick="Jukebox(volumeDown())">-</button>
+</div>
+<div style="margin-top: 10px;">
+<button class="btn btn-info" onclick="Jukebox(backward())">Backward</button>
+<button class="btn btn-info" onclick="Jukebox(forward())">Forward</button>
 
 <!--<button onclick="Jukebox(skip())">Skip</button><br>-->
-
-<button onclick="Jukebox(mute())">MUTE</button>
-
-</p>
-<!--  maybe gonna work on this
-<div class="result">
-RESULTS: 
-<ul id="searchResults">
-</ul>
+<button class="btn btn-warning" onclick="Jukebox(stop())">STOP</button>
+<button class="btn btn-warning	" onclick="Jukebox(mute())">MUTE</button>
 </div>
--->
+</p>
+
 <p>
 <ul id="playlist">	
 <li class="active">
@@ -54,7 +61,7 @@ PLAYLIST
 </ul>
 </p>
 
-
+</div><!-- close tag for div container class-->
 
 </body>
 

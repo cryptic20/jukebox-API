@@ -1,17 +1,20 @@
+#link{
+	margin-top: 30px;
+}
 span {
 	margin-left: 15px;
-	font-size: 10px;
+	font-size: 15px;
+	color: black;
 	font-weight: bold;
 }
 
-p.player{
-	margin-left: 15px;
-}
+
+
 
 #playlist{
+	margin-top: 25px;
 	font-size: 20px;
-	background:black;
-	width:250px;
+	background-color:rgba(0, 0, 0, 0.5);
 	overflow: scroll;
 }
 .active a{
@@ -28,11 +31,32 @@ li {
 li a{
 	text-decoration: none;
 	color:white;
-	display:block;}
+	display:block;
+	
+	}
+
 li a:hover{
 	text-decoration:
 	none;
 }
+html {
+	background: no-repeat center center fixed;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+body{
+	background-color: transparent;
+
+
+
+}
+
+
+
 /*
 #searchResult{
 	font-weight: bold;
